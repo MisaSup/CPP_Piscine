@@ -2,7 +2,7 @@ NAME = megaphone
 
 LIST_C = megaphone.cpp
 
-OBJ_C = ${patsubst %.c, %.o, ${LIST_C}}
+OBJ_C = ${patsubst %.cpp, %.o, ${LIST_C}}
 
 FLAGS = -Wall -Wextra -Werror -lstdc++ -std=c++98
 
@@ -12,7 +12,7 @@ all : ${NAME}
 ${NAME} : ${OBJ_C} 
 	@gcc -o ${NAME} ${FLAGS} ${PTHREAD} ${OBJ_C}
 
-%.o : %.c 
+%.o : %.cpp 
 	@gcc ${FLAGS} -c $< -o $@
 
 clean :

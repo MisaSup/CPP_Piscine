@@ -2,7 +2,7 @@ NAME = phone_book
 
 LIST_C = main.cpp
 
-OBJ_C = ${patsubst %.c, %.o, ${LIST_C}}
+OBJ_C = ${patsubst %.cpp, %.o, ${LIST_C}}
 
 HEADERS = PhoneBook.hpp Contact.hpp
 
@@ -14,7 +14,7 @@ all : ${NAME}
 ${NAME} : ${OBJ_C} ${HEADERS}
 	@gcc -o ${NAME} ${FLAGS} ${PTHREAD} ${OBJ_C}
 
-%.o : %.c 
+%.o : %.cpp 
 	@gcc ${FLAGS} -c $< -o $@
 
 clean :
