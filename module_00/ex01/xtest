@@ -1,0 +1,5 @@
+#!/bin/bash
+
+make 
+./phone_book
+make clean

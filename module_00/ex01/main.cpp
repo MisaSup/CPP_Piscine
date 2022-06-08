@@ -1,4 +1,4 @@
-#include "./Contact.hpp"
+#include "Contact.hpp"
 #include "PhoneBook.hpp"
 #include <iostream>
 
@@ -10,8 +10,6 @@ int main()
     // user.fillFields();
 
     std::cout << user.nickname;
-    first.add();
-    first.add();
-    first.search();
+    first.start();
     return 0;
 }

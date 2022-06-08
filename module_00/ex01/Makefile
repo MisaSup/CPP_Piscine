@@ -1,6 +1,6 @@
 NAME = phone_book
 
-LIST_C = main.cpp
+LIST_C = main.cpp Contact.cpp PhoneBook.cpp
 
 OBJ_C = ${patsubst %.cpp, %.o, ${LIST_C}}
 
