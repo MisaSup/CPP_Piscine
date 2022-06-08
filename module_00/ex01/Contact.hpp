@@ -7,16 +7,18 @@
 
 class Contact 
 {
-    private:
-        std::string darkest_secret;
+    std::string darkest_secret;
+    std::string first_name;
+    std::string last_name;
+    std::string nickname;
+    std::string number;
+    std::string get_user_input(std::string s);
     public:
-        std::string first_name;
-        std::string last_name;
-        std::string nickname;
-        std::string number;
         void fillFields();
-    private:
-        std::string get_user_input(std::string s);
+        std::string get_name();
+        std::string get_surname();
+        std::string get_nickname();
+        std::string get_number();
 };
 
 #endif

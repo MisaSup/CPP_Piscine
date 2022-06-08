@@ -4,12 +4,8 @@
 
 int main()
 {
-    Contact user;
-    PhoneBook first;
+    PhoneBook phone_book;
 
-    // user.fillFields();
-
-    std::cout << user.nickname;
-    first.start();
-    return 0;
+    phone_book.start();
+    return (0);
 }

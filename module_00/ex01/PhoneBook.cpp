@@ -6,7 +6,6 @@
 PhoneBook::PhoneBook()
 {
     next_cell = 0;
-    arr_length = 0;
 }
 
 void PhoneBook::add()
@@ -24,9 +23,9 @@ void PhoneBook::search()
     for (i = 0; i < 8; i++)
     {
         std::cout << std::setw(10) << i << " | ";
-        std::cout << std::setw(10) << fit_string(contacts_arr[i].first_name) << " | ";
-        std::cout << std::setw(10) << fit_string(contacts_arr[i].last_name) << " | ";
-        std::cout << std::setw(10) << fit_string(contacts_arr[i].nickname) << " | " << std::endl;
+        std::cout << std::setw(10) << fit_string(contacts_arr[i].get_name()) << " | ";
+        std::cout << std::setw(10) << fit_string(contacts_arr[i].get_surname()) << " | ";
+        std::cout << std::setw(10) << fit_string(contacts_arr[i].get_nickname()) << " | " << std::endl;
     }
     prompt_contact();
 }
@@ -49,10 +48,10 @@ void PhoneBook::prompt_contact()
     std::cin >> index;
     if (index > -1 && index < next_cell)
     {
-        std::cout << "Name: " << contacts_arr[index].first_name << std::endl;
-        std::cout << "Surname: " << contacts_arr[index].last_name << std::endl;
-        std::cout << "Nickname: " << contacts_arr[index].nickname << std::endl;
-        std::cout << "Number: " << contacts_arr[index].number << std::endl;
+        std::cout << "Name: " << contacts_arr[index].get_name() << std::endl;
+        std::cout << "Surname: " << contacts_arr[index].get_surname() << std::endl;
+        std::cout << "Nickname: " << contacts_arr[index].get_nickname() << std::endl;
+        std::cout << "Number: " << contacts_arr[index].get_number() << std::endl;
     }
     else
         std::cout << "This contact havent exist yet" << std::endl;

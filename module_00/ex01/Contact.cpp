@@ -21,3 +21,23 @@ std::string Contact::get_user_input(std::string s)
     while (value.empty());
     return (value);
 }
+
+std::string Contact::get_name()
+{
+    return (first_name);
+}
+
+std::string Contact::get_surname()
+{
+    return (last_name);
+}
+
+std::string Contact::get_nickname()
+{
+    return (nickname);
+}
+
+std::string Contact::get_number()
+{
+    return (number);
+}
